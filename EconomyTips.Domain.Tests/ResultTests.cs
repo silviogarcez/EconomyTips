@@ -28,7 +28,7 @@ namespace EconomyTips.Domain.Tests
             var result = new Result<string>();
 
             // Act
-            result.BadRequest(null, "Bad request error");
+            result.BadRequest("Bad request error");
 
             // Assert
             Assert.IsNull(result.Value);

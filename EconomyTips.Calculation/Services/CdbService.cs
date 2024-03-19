@@ -19,8 +19,8 @@ namespace EconomyTips.Calculation.Services
             }
             catch (Exception ex)
             {
-                ret.BadRequest(null, ex.Message);
-                logger.LogError("GetCalculation Method has an error: ", ex);
+                ret.BadRequest(ex.Message);
+                logger.LogError(ex, "GetCalculation Method has an error: ");
                 throw;
             }
 

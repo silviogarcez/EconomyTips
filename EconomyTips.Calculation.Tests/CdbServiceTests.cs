@@ -10,9 +10,11 @@ namespace EconomyTips.Calculation.Services.Tests
     [TestFixture]
     public class CdbServiceTests
     {
-        private CdbService _cdbService;
-        private Mock<ILogger<CdbService>> _loggerMock;
-        private Mock<ICdb> _cdbMock;
+
+        private Mock<ILogger<CdbService>>? _loggerMock;
+        private Mock<ICdb>? _cdbMock;
+        private CdbService? _cdbService;
+        
 
         [SetUp]
         public void SetUp()
@@ -25,25 +27,35 @@ namespace EconomyTips.Calculation.Services.Tests
         [Test]
         public void GetCalculation_Successful()
         {
-            // Arrange
-            var expectedResult = new Result<ICdb>().OK(_cdbMock.Object);
+            if (_cdbMock is not null)
+            {
+                // Arrange
+                var expectedResult = new Result<ICdb>().OK(_cdbMock.Object);
 
-            // Act
-            var result = _cdbService.GetCalculation(_cdbMock.Object);
+                // Act
+                var result = _cdbService?.GetCalculation(_cdbMock.Object);
 
-            // Assert
-            Assert.AreEqual(expectedResult.Sucess, result.Sucess);            
-            Assert.AreEqual(expectedResult.ErrorMessage, string.Empty);
+                // Assert
+                Assert.AreEqual(expectedResult.Sucess, result?.Sucess);
+                Assert.AreEqual(expectedResult.ErrorMessage, string.Empty);
+            }
+            else
+                Assert.AreEqual("", "error");
         }
 
         [Test]
         public void GetCalculation_Exception()
         {
-            // Arrange
-            _cdbMock.Setup(c => c.Calculation(It.IsAny<ICdb>())).Throws(new Exception("Test exception"));
+            if (_cdbMock is not null)
+            {
+                // Arrange
+                _cdbMock.Setup(c => c.Calculation(It.IsAny<ICdb>())).Throws(new Exception("Test exception"));
 
-            // Act + Assert
-            Assert.ThrowsException<Exception>(() => _cdbService.GetCalculation(_cdbMock.Object), "Test exception");            
+                // Act + Assert
+                Assert.ThrowsException<Exception>(() => _cdbService?.GetCalculation(_cdbMock.Object), "Test exception");
+            }
+            else
+                Assert.AreEqual("", "error");
         }
     }
 }

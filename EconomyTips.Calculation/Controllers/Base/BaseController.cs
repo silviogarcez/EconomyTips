@@ -17,8 +17,6 @@ namespace EconomyTips.Calculation.Controllers.Base
             {
                 return BadRequest(result);
             }
-
-            return null;
         }
     }
 }

@@ -2,9 +2,9 @@
 {
     public class Result<T>
     {
-        public T Value { get; set; }
+        public T? Value { get; set; }
 
-        public String ErrorMessage { get; set; }
+        public String ErrorMessage { get; set; } = "";
 
         public bool Sucess => string.IsNullOrEmpty(ErrorMessage);
 
@@ -15,9 +15,8 @@
             return this;
         }
 
-        public Result<T> BadRequest(T value, string ErrorMessage)
-        {
-            Value = value;
+        public Result<T> BadRequest(string ErrorMessage)
+        {            
             this.ErrorMessage = ErrorMessage;
             return this;
         }
