@@ -21,6 +21,9 @@
 
 ![image](https://github.com/silviogarcez/EconomyTips/assets/28707195/e17fce5b-3d04-4d5f-b711-0401db2ebe04)
 
+6 - Cobertura
+
+![image](https://github.com/silviogarcez/EconomyTips/assets/28707195/6982ab23-d6a8-4b1c-b73f-fe9df6988440)
 
 
 
