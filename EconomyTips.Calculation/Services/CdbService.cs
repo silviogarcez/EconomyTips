@@ -19,7 +19,7 @@ namespace EconomyTips.Calculation.Services
             }
             catch (Exception ex)
             {
-                ret = ret.BadRequest(cdb.Calculation(cdb), ex.Message);
+                ret.BadRequest(null, ex.Message);
                 logger.LogError("GetCalculation Method has an error: ", ex);
                 throw;
             }

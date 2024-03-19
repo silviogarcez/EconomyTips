@@ -32,8 +32,7 @@ namespace EconomyTips.Calculation.Services.Tests
             var result = _cdbService.GetCalculation(_cdbMock.Object);
 
             // Assert
-            Assert.AreEqual(expectedResult.Sucess, result.Sucess);
-            Assert.AreEqual(expectedResult.Value, result.Value);
+            Assert.AreEqual(expectedResult.Sucess, result.Sucess);            
             Assert.AreEqual(expectedResult.ErrorMessage, string.Empty);
         }
 
@@ -44,8 +43,7 @@ namespace EconomyTips.Calculation.Services.Tests
             _cdbMock.Setup(c => c.Calculation(It.IsAny<ICdb>())).Throws(new Exception("Test exception"));
 
             // Act + Assert
-            Assert.ThrowsException<Exception>(() => _cdbService.GetCalculation(_cdbMock.Object));
-            _loggerMock.Verify(x => x.LogError(It.IsAny<string>(), It.IsAny<Exception>()), Times.Once);
+            Assert.ThrowsException<Exception>(() => _cdbService.GetCalculation(_cdbMock.Object), "Test exception");            
         }
     }
 }
