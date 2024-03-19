@@ -1,0 +1,12 @@
+<h1>CDB</h1>
+<div class="form-group mb-4">
+  <label for="startvalue">StartValue</label>
+  <input type="number" [(ngModel)]="startvalue" class="form-control" id="startvalue" placeholder="Enter a startmoney">  
+</div>
+<div class="form-group mb-4">
+  <label for="months">Meses</label>
+  <input type="number" [(ngModel)]="months" class="form-control" id="months" placeholder="Enter a quantity of months" >  
+</div>
+<button class="btn btn-primary" (click)="Calculating()" >Calculate</button>
+<!--<p id="LabelResultadoBruto" class="mt-4" aria-live="polite">Resultado Cálculo CDB Bruto: <strong>{{ ResultadoBruto | currency:'BRL':'symbol':'1.2-2' }}</strong></p>
+<p id="LabelResultadoliquido" class="mt-4" aria-live="polite">Resultado Cálculo CDB Líquido: <strong>{{ ResultadoLiquido | currency:'BRL':'symbol':'1.2-2' }}</strong></p>-->

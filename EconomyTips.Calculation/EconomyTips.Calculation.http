@@ -1,0 +1,6 @@
+@EconomyTips.Calculation_HostAddress = http://localhost:5064
+
+GET {{EconomyTips.Calculation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
