@@ -1,5 +1,7 @@
 # EconomyTips
 
+Tecnologias: Projeto usando .net 8 e angular cli
+
 1 - Fazer o gitclone do projeto
 
 2 - Executar a solution do projeto
