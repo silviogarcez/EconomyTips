@@ -3,11 +3,13 @@ using EconomyTips.Calculation.Services.Abstractions.Interfaces;
 using EconomyTips.Domain;
 using EconomyTips.Domain.Abstractions.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EconomyTips.Calculation.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [ExcludeFromCodeCoverage]
     public class CdbController(ILogger<CdbController> logger, ICdbService cdbService) : BaseController
     {
 

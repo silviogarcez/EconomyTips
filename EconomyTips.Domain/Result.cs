@@ -16,7 +16,7 @@
         }
 
         public Result<T> BadRequest(string ErrorMessage)
-        {            
+        {
             this.ErrorMessage = ErrorMessage;
             return this;
         }

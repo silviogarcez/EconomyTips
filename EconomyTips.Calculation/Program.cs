@@ -1,5 +1,6 @@
 using EconomyTips.Calculation.Services;
 using EconomyTips.Calculation.Services.Abstractions.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,3 +36,13 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+[ExcludeFromCodeCoverage]
+public partial class Program
+{
+
+    protected Program()
+    {
+
+    }
+}

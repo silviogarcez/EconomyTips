@@ -3,18 +3,20 @@ using EconomyTips.Domain.Abstractions.Interfaces;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using System.Diagnostics.CodeAnalysis;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace EconomyTips.Calculation.Services.Tests
 {
     [TestFixture]
+    [ExcludeFromCodeCoverage]
     public class CdbServiceTests
     {
 
         private Mock<ILogger<CdbService>>? _loggerMock;
         private Mock<ICdb>? _cdbMock;
         private CdbService? _cdbService;
-        
+
 
         [SetUp]
         public void SetUp()

@@ -1,9 +1,10 @@
 ﻿using NUnit.Framework;
-using System;
+using System.Diagnostics.CodeAnalysis;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace EconomyTips.Domain.Tests
 {
+    [ExcludeFromCodeCoverage]
     [TestFixture]
     public class CdbTests
     {
