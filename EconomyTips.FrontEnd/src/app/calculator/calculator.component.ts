@@ -9,16 +9,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CalculatorComponent {
   public startvalue: number | undefined;
   public months: number | undefined;
+  public finalValue: number | undefined;
+  public finalValueWithTaxes: number | undefined;
 
-  constructor(private http: HttpClient) { }
+  constructor(public httpClient: HttpClient) { }
 
   Calculating() {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    const body = { "startValue": this.startvalue, "months": this.months }
+    const body = { "startValue": this.startvalue, "months": this.months }    
 
-    this.http.post('https://localhost:7223/Cdb', body, { headers }).subscribe(
+    this.httpClient.post('https://localhost:7223/Cdb', body).subscribe(
       (data: any) => {
-        
+        this.finalValue = data.finalValue;
+        this.finalValueWithTaxes = data.finalValueWithTaxes;
       },
       (error: any) => {
         console.error('Erro:', error);
