@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EconomyTips.Domain", "Econo
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "EconomyTips.FrontEnd", "EconomyTips.FrontEnd\EconomyTips.FrontEnd.esproj", "{6260C2E9-BCDE-4394-BE7E-991908D90EBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomyTips.Calculation.Tests", "EconomyTips.Calculation.Tests\EconomyTips.Calculation.Tests.csproj", "{04C5757C-68D8-44EA-BE5B-C506492F5593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{6260C2E9-BCDE-4394-BE7E-991908D90EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6260C2E9-BCDE-4394-BE7E-991908D90EBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6260C2E9-BCDE-4394-BE7E-991908D90EBE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{04C5757C-68D8-44EA-BE5B-C506492F5593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C5757C-68D8-44EA-BE5B-C506492F5593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C5757C-68D8-44EA-BE5B-C506492F5593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C5757C-68D8-44EA-BE5B-C506492F5593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{4DFAFCCA-8D13-4394-98CA-28C318E23FC3} = {742DA69E-EFCD-46FB-B776-ED7A2A153411}
 		{B935BB0C-8C64-436A-92CE-C15AF4D53CAD} = {07A4AA06-26FD-4C05-A362-BD1E7EE5FA45}
 		{6260C2E9-BCDE-4394-BE7E-991908D90EBE} = {9BC9D459-2359-46FE-AAF5-629EFAAC1BFD}
+		{04C5757C-68D8-44EA-BE5B-C506492F5593} = {742DA69E-EFCD-46FB-B776-ED7A2A153411}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61CE34B9-9745-4A92-ABFE-C8F501718F20}
