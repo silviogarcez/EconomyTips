@@ -18,7 +18,7 @@ namespace EconomyTips.Domain
             if (this.StartValue < 0)
                 throw new ArgumentException("Started value must be greater than zero.");
 
-            if (this.Months < 1)
+            if (this.Months < 2)
                 throw new ArgumentException("Month value must be greater than one.");
         }
 
